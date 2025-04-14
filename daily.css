@@ -1,0 +1,49 @@
+*{
+    color: azure;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgb(31, 31, 31);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex:
+}
+.hero{
+    background-image: url("bg1.png");
+    background-repeat: no-repeat;
+    background-size: 50vh;
+    background-position: 150vh 40vh;
+    background-origin: content-box;
+    background-color: rgba(0, 0, 0, 0.753);
+    padding: 30px;
+    height: 100vh;
+    justify-content:start;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20vh;
+}
+.hero h1{
+    text-align: center;
+    width: 100%;
+    font-size: 64px;
+    letter-spacing: -1.5%;
+    margin-bottom: 10px;
+}
+.hero h2{
+    text-align: center;
+    color: aquamarine;
+    letter-spacing: 2px;
+    margin: 0 auto;
+}
+
+.serv{
+    height: 20vh;
+    width: auto;
+}
