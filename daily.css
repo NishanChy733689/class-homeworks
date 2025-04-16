@@ -1,4 +1,7 @@
 /* General Styles */
+*{
+    font-family:Calibri;
+}
 html{
     scroll-behavior: smooth;
     scroll-snap-type: mandatory;
@@ -163,4 +166,17 @@ footer p {
         opacity: 1;
         transform: translateX(0);
     }
+}
+table{
+    background: linear-gradient(to right, #e9ed0983, #2574fcac);
+    text-align: center;
+    border-radius: 2vh;
+    width: 80%;
+}
+table *{
+    
+    border: #255efc00 solid 1vh;
+    gap: none;
+    margin: 0px;
+
 }
