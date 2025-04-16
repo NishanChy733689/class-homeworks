@@ -3,46 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily life</title>
+    <title>Daily Life</title>
     <link rel="stylesheet" href="daily.css">
 </head>
 <body>
-    <!-- *The hero section of the website -->
-    <section class="hero">
-        <h1>MAKE THE BEST OF YOUR DAYS <br></h1><br>
-        <h2>We will guide you to the best use of time</h2>
-    </section>
-
-    <!-- *A section to show the many things you can do efficintly -->
-
+<header class="hero">
+    <div class="hero-content">
+        <h1>Welcome to My Daily Life</h1>
+        <p>Discover how I spend my day and find inspiration for your own routine.</p>
+        <a href="#main-content" class="btn">Explore More</a>
+    </div>
+</header>
+<main id="main-content">
     <section>
-        <div class="work">
-            <div>
-                <h3>Wake up</h3>
-            </div>
-            <div>
-                <h3>Wash face</h3>
-            </div>
-            <div>
-                <h3>Have brakefast</h3>
-            </div>
-            <div>
-                <h3>And Many more</h3>
-            </div>
-        </div>
+        <h2>Morning</h2>
+        <p>I start my day with a cup of coffee and some light exercise. After that, I prepare breakfast and get ready for work.</p>
     </section>
-
-    <!--  * Section to show why their services are good  -->
-
     <section>
-        <div class="serv">
-            <dl>
-                <dt>The best eficiency</dt>
-                <dd>You can get the best eficiency on you daily work and be more productive</dd>
-                <dt>The best time management</dt>
-            </dl>     
-            
-        </div>
+        <h2>Afternoon</h2>
+        <p>During the afternoon, I focus on my work tasks and take a short lunch break. I also try to go for a quick walk to refresh my mind.</p>
     </section>
+    <section>
+        <h2>Evening</h2>
+        <p>In the evening, I spend time with my family, cook dinner, and relax by reading a book or watching a movie.</p>
+    </section>
+    <section>
+        <h2>Night</h2>
+        <p>Before going to bed, I reflect on the day, plan for tomorrow, and enjoy some quiet time to unwind.</p>
+    </section>
+    <section>
+        <h2>Tips for an Efficient Routine</h2>
+        <ul>
+            <li>Start your day with a clear plan. Use a <a href="https://todoist.com/" target="_blank">to-do list app</a> to organize tasks.</li>
+            <li>Incorporate short breaks during work to stay productive. Try the <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank">Pomodoro Technique</a>.</li>
+            <li>Stay hydrated and eat balanced meals to maintain energy levels.</li>
+            <li>Set aside time for self-care, such as meditation or exercise.</li>
+            <li>Reflect on your day and adjust your routine as needed for continuous improvement.</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 My Daily Life</p>
+</footer>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const sections = document.querySelectorAll("main section");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible"); // Remove the class when out of view
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+    });
+</script>
 </body>
 </html>

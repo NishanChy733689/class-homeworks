@@ -1,49 +1,166 @@
-*{
-    color: azure;
-    font-family: sans-serif;
+/* General Styles */
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
 }
-body{
-    background-color: rgb(31, 31, 31);
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    height: 100vh;
-    width: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex:
-}
-.hero{
-    background-image: url("bg1.png");
-    background-repeat: no-repeat;
-    background-size: 50vh;
-    background-position: 150vh 40vh;
-    background-origin: content-box;
-    background-color: rgba(0, 0, 0, 0.753);
-    padding: 30px;
-    height: 100vh;
-    justify-content:start;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 20vh;
-}
-.hero h1{
-    text-align: center;
-    width: 100%;
-    font-size: 64px;
-    letter-spacing: -1.5%;
-    margin-bottom: 10px;
-}
-.hero h2{
-    text-align: center;
-    color: aquamarine;
-    letter-spacing: 2px;
-    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f9;
 }
 
-.serv{
-    height: 20vh;
-    width: auto;
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 40px 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+}
+
+main section {
+    background: linear-gradient(to right, #6b11cb50, #2574fcac);
+    padding: 4vh;
+    border-radius: 2vh;
+    margin-bottom: 30px;
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Start position for animation */
+    transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+main section.visible {
+    opacity: 1;
+    transform: translateY(0); /* End position for animation */
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #2575fc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6a11cb;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+main p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Tips Section */
+main ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #444;
+}
+
+main ul li a {
+    color: #2575fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+main ul li a:hover {
+    color: #6a11cb;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    position:sticky;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    position:sticky;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    position:sticky;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #2575fc;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background: #2575fc;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
