@@ -1,0 +1,36 @@
+body{
+    font-family: sans-serif;
+    padding: 0%;
+    margin: 0px;
+}
+
+figure{
+    animation:swipe 1s ease-in-out 1 forwards;
+}
+nav{
+    background-color: darkgray;
+    position: static;
+    
+}
+nav ul a{
+    text-decoration: none;
+    color: aliceblue;
+    
+    transition: 0.5s ease-in-out;
+}
+nav ul a:hover{
+    font-weight: bolder;
+    font-size: larger;
+}
+@keyframes swipe{
+    0%{
+        transform: translateX(-100vh);
+        scale:0.2
+        
+    }
+    100%{
+        transform: translateX(0vh);
+        border-radius: 5vh;
+        
+    }
+}
