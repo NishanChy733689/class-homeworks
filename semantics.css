@@ -2,20 +2,34 @@ body{
     font-family: sans-serif;
     padding: 0%;
     margin: 0px;
+    color: whitesmoke;
+    background-color: rgb(34, 34, 52);
 }
 
 figure{
     animation:swipe 1s ease-in-out 1 forwards;
 }
 nav{
+    display: flex;
     background-color: darkgray;
     position: static;
+    justify-content: center;
+
     
+}
+.home{
+    margin-left: 0 auto ;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 nav ul a{
     text-decoration: none;
     color: aliceblue;
-    
+    padding: 5rem;
     transition: 0.5s ease-in-out;
 }
 nav ul a:hover{

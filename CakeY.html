@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cakes</title>
+    <link rel="stylesheet" href="ck.css">
+</head>
+<body>
+    <h1>Cakey Bakeries</h1>
+    <h2>GET THE BEST CAKES FOR THE BEST PRICE<br></h2>
+    <h3>Get started by filling the form below</h3>
+    <center>
+    <form action="">
+        <fieldset>
+            <legend><h3>Personal Info</h3></legend>
+            <label for="Name">Enter Your name</label>
+            <input type="text"><br>
+            <label for="Email">Enter Your e-mail</label>
+            <input type="email"><br>
+            <label for="Phone">Enter your ph. no.</label>
+            <input type="number" min="8800000000000">
+        </fieldset>
+        <fieldset>
+            <legend><h3>Cake Customisation</h3></legend>
+            <label for="">Choose your cake base </label>
+            <input type="radio" name="Base">vanilla
+            <input type="radio" name="Base">chocolate
+            <input type="radio" name="Base">strawberry
+            <input type="radio" name="Base">mango
+            <br><br>
+            <label for="Top">
+                Choose your toppings
+            </label><br>
+            <input type="checkbox">Choco Chips 
+            <input type="checkbox">White Chocolate
+            <input type="checkbox">Wafer
+            <input type="checkbox">Fresh Fruits <br>
+            <input type="checkbox">Sprinkles
+            <input type="checkbox">Custom Figures
+            <input type="checkbox">Name/Wish
+            <input type="checkbox">Caramel
+            <br><br>
+            <label for="">
+                Candles (optional)
+            </label>
+            <select name="Candles" id="candles">
+                <option value="0">None</option>
+                <option value="1">Digit/ Age Candles</option>
+                <option value="2">Magic Candles</option>
+                <option value="3">Sparkler Candles</option>
+            </select>
+        </fieldset>
+        <label for="Time"> Choose your time for pickup/Delivery</label> 
+        <input type="datetime-local" name="time" id="time"><br><br>
+        <input type="submit" value="Place Order">
+    </form>
+    </center>
+</body>
+</html>

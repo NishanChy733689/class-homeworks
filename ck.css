@@ -1,0 +1,20 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: #a6cdeb;
+}
+h1{
+    letter-spacing: -0.6vh;
+    word-spacing: 1.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7.6vh;
+    font-weight: 300;
+    margin: 3vh;
+}
+h2,h3{
+    margin: 3vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+fieldset{
+    margin: 3vh;
+}

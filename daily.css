@@ -35,13 +35,13 @@ main section {
     border-radius: 2vh;
     margin-bottom: 30px;
     opacity: 0; /* Initially hidden */
-    transform: translateY(50px); /* Start position for animation */
-    transition: opacity 1s ease-out, transform 2s ease-out;
+    transform: translateX(100px); /* Start position for animation */
+    transition: opacity 0.3s ease-in, transform 1s ease-out;
 }
 
 main section.visible {
     opacity: 1;
-    transform: translateY(0); /* End position for animation */
+    transform: translateX(0); /* End position for animation */
 }
 
 main h2 {
@@ -167,16 +167,35 @@ footer p {
         transform: translateX(0);
     }
 }
-table{
-    background: linear-gradient(to right, #e9ed0983, #2574fcac);
+table {
+    background: linear-gradient(to right, #f0f4f8, #d9e2ec);
     text-align: center;
-    border-radius: 2vh;
-    width: 80%;
+    border-radius: 10px;
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-table *{
-    
-    border: #255efc00 solid 1vh;
-    gap: none;
-    margin: 0px;
 
+table th, table td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+}
+
+table th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+
+table tr:hover {
+    background-color: #e3e8ee;
+    transition: background-color 0.3s ease;
 }
