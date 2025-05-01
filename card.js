@@ -1,4 +1,4 @@
-/* -- Glow effect -- */
+//* -- Glow effect -- */
 
 const blob = document.getElementById("blob");
 
@@ -11,7 +11,7 @@ const blob = document.getElementById("blob");
    }, { duration: 3000, fill: "forwards" });
  }
 
-/* -- Text effect -- */
+//* -- Text effect -- */
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
