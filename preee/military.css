@@ -1,0 +1,42 @@
+body {
+  margin: 0px;
+  padding-top: 0px;
+  background-color: aliceblue;
+  min-height: 100vh;
+  min-width: 100vh;
+}
+h1,
+button {
+  font-family: sans-serif;
+}
+button {
+  max-width: 25vh;
+  background-color: greenyellow;
+  border: none;
+  transition: 0.5s;
+}
+button:hover {
+  border-radius: 8vh;
+}
+button:active {
+  border-radius: 2vh;
+  scale: 0.9;
+  background-color: darkseagreen;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  background: #4fbe8394;
+  height: 100vh;
+  text-align: center;
+  text-justify: distribute;
+  align-items: center;
+}
+.slider{
+    animation: out 0.5 ease-in-out 0.2s 1 forwards;
+}
+@keyframes out {
+    0%{}
+  100% {transform: translateX(-50%);
+  }
+}
