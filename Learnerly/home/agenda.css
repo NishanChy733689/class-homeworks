@@ -1,0 +1,16 @@
+.first{
+    float:left;
+}
+.write{
+    text-align: justify;
+    line-height: 5vh;
+    padding: 3vh;
+    font-family: sans-serif;
+}
+.write::first-letter{
+    font-size: x-large;
+}
+.bulb{
+    float: right;
+    
+}img{margin: 10px};
