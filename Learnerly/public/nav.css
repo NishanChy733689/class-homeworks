@@ -1,11 +1,20 @@
 nav * {
     color: rgb(26, 39, 39);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
 }
-
+.current{
+    background-color: rgba(92, 92, 92, 0.559);
+    height:100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-decoration:underline;
+    text-decoration-color: #2575fc;
+}
 nav {
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -37,6 +46,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #1a5bb8;
+    text-decoration: underline;
 }
 
 nav ul li button {

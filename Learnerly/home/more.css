@@ -1,0 +1,41 @@
+.more-hero {
+  background: linear-gradient(rgba(37,117,252,0.7), rgba(101,117,129,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800') no-repeat center center/cover;
+  color: #fff;
+}
+
+.more-hero h1 {
+  color: #ffb347;
+}
+
+.more-hero button {
+  background-color: #ffb347;
+  color: #222;
+  margin-top: 20px;
+}
+
+.faq {
+  padding: 40px 20px;
+  background: #f3f7fa;
+  text-align: center;
+}
+
+.faq h2 {
+  color: #2575fc;
+  margin-bottom: 20px;
+}
+
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: left;
+}
