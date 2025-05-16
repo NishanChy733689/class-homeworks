@@ -1,31 +1,49 @@
+/*Todo Color Variables */
+:root {
+  --AccentColour: #5dade2;
+  --agenda-bg-gradient: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  --agenda-write-bg: rgba(255, 255, 255, 0.295);
+  --agenda-text-main: #222;
+  --agenda-border-radius: 20px;
+  --agenda-img-shadow: 2px 2px 6px black;
+  --agenda-img-hover-radius: 20%;
+}
+
+/*General Styles */
+
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://media.istockphoto.com/id/2149269916/photo/handsome-student-writing-an-essay-on-laptop-computer-thinking-about-the-topic-brainstorming.jpg?s=612x612&w=0&k=20&c=rtGdQ2XEHWFv1C-L0chfEudwA0vtjTKE-mfSj1TCI0s=")
-      no-repeat center center/cover;
+  background-color: #b5e2fa;
 }
 .first {
   float: left;
 }
+
 .write {
-  background-color: rgba(255, 255, 255, 0.295); 
+  background-color: #5dade2;
+  /*background-color: var(--agenda-write-bg);*/
   text-align: justify;
   line-height: 5vh;
   margin: 5% 10%;
   font-family: sans-serif;
   padding: 3%;
-  border-radius: 20px;
+  border-radius: var(--agenda-border-radius);
+  color: var(--agenda-text-main);
 }
+
 .write::first-letter {
   font-size: x-large;
   font-weight: bolder;
 }
+
 .bulb {
   float: right;
 }
+
 img:hover {
-  border-radius: 20%;
-  box-shadow: 2px 2px 6px black;
+  border-radius: var(--agenda-img-hover-radius);
+  box-shadow: var(--agenda-img-shadow);
 }
+
 img {
   width: 30%;
   transition: 1s ease-in-out;

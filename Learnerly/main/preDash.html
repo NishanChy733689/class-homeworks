@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnerly - Welcome</title>
+    <link rel="stylesheet" href="../home/index.css" />
+    <link rel="stylesheet" href="../public/nav.css" />
+    <style>
+      .pre-dash-container {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: var(--primary-bg, #f0f4f8);
+      }
+      .pre-dash-container h1 {
+        font-size: 2.5rem;
+        color: var(--primary-blue, #2575fc);
+        margin-bottom: 20px;
+      }
+      .pre-dash-container p {
+        font-size: 1.2rem;
+        color: var(--text-main, #333);
+        margin-bottom: 30px;
+        max-width: 500px;
+      }
+      .pre-dash-container button {
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        background: var(--primary-blue, #2575fc);
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .pre-dash-container button:hover {
+        background: var(--primary-blue-dark, #1a5bb8);
+      }
+    </style>
+</head>
+<body>
+    <nav>
+      <ul>
+        <li>Learnerly</li>
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../home/agenda.html">Courses</a></li>
+        <li><a href="../home/more.html">Teachers</a></li>
+        <li>
+          <button><a href="../home/login.html">Dashboard</a></button>
+        </li>
+      </ul>
+    </nav>
+    <div class="pre-dash-container">
+        <h1>Welcome to Your Learnerly Dashboard</h1>
+        <p>
+          You're almost there! Before you access your dashboard, please review your profile and make sure your information is up to date. This helps us personalize your learning experience.
+        </p>
+        <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+    </div>
+</body>
+</html>

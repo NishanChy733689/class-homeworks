@@ -1,0 +1,115 @@
+:root {
+  --primary-bg: #a9def9;
+  --primary-blue: #2f515a;
+  --primary-blue-light: #88a6ce;
+  --primary-yellow: #ffb347;
+  --text-main: #222;
+  --text-light: #fff;
+  --google-red: #ea4335;
+}
+
+body {
+  background-color: var(--primary-bg);
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.Log {
+  background: var(--primary-blue-light);
+  max-width: 350px;
+  margin: 60px auto 0 auto;
+  padding: 32px 24px 24px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Log h2 {
+  color: var(--primary-blue);
+  margin-bottom: 24px;
+}
+
+.Log input[type="email"],
+.Log input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--primary-blue);
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.Log button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary-blue);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.Log button[type="submit"]:hover {
+  background: var(--primary-blue-light);
+}
+
+.divider {
+  margin: 18px 0;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.google-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--google-red);
+  color: var(--text-light);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+.google-btn:hover {
+  background: #c5221f;
+}
+
+.signup-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary-yellow);
+  color: var(--text-main);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.2s;
+}
+
+#login-message {
+  margin-top: 16px;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+#show-login {
+  width: 100%;
+  padding: 10px;
+  background: var(--primary-yellow);
+  color: var(--text-main);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all ease-in-out 0.2s;
+  margin: 15px;
+}

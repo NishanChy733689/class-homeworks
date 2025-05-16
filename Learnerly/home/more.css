@@ -1,6 +1,8 @@
 .more-hero {
   background: linear-gradient(rgba(37,117,252,0.7), rgba(101,117,129,0.7)), url('https://images.unsplash.com/photo-1464983953574-0892a716854b?w=800') no-repeat center center/cover;
   color: #fff;
+  height:100%;
+  padding: 13vh;
 }
 
 .more-hero h1 {
