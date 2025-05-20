@@ -1,0 +1,128 @@
+/* Dashboard Layout */
+body {
+  background: #f7f8fa;
+}
+.dashboard-main {
+  min-height: 100vh;
+  position: relative;
+}
+.dashboard-sidebar {
+    top: auto;
+    left: auto;
+    position: sticky;
+  min-height: 100vh;
+  border-right: 1px solid #eee;
+}
+.dashboard-sidebar .nav-link {
+  color: #222;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition:all 0.2s, color 0.2s;
+}
+.dashboard-sidebar .nav-link.active,
+.dashboard-sidebar .nav-link:hover {
+  background: #ffede0;
+  color: #ff5630;
+}
+.dashboard-sidebar .badge {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+.dashboard-sidebar .fa {
+  width: 20px;
+  text-align: center;
+}
+.dashboard-sidebar .bg-light {
+  background: #f7f8fa !important;
+}
+.dashboard-sidebar .small {
+  color: #888;
+}
+.dashboard-sidebar .fa-arrow-right {
+  font-size: 0.9em;
+}
+.dashboard-sidebar .bg-success {
+  background: #2ecc40 !important;
+}
+.dashboard-sidebar .bg-success.badge {
+  color: #fff;
+}
+.dashboard-sidebar .bg-light.badge {
+  color: #222;
+}
+.dashboard-sidebar .rounded {
+  border-radius: 10px !important;
+}
+.dashboard-sidebar .p-2 {
+  padding: 0.75rem !important;
+}
+
+/* Profile & Progress */
+.bg-white {
+  background: #fff !important;
+}
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+.rounded {
+  border-radius: 16px !important;
+}
+.progress {
+  background: #e9ecef;
+  border-radius: 8px;
+}
+.progress-bar.bg-success {
+  background: #2ecc40 !important;
+}
+.btn-light {
+  background: #f7f8fa;
+  border: 1px solid #eee;
+}
+.btn-light .fa-camera {
+  color: #ff5630;
+}
+.text-success {
+  color: #2ecc40 !important;
+}
+.text-secondary {
+  color: #888 !important;
+}
+.text-danger {
+  color: #ff5630 !important;
+}
+.btn-danger,
+.btn-outline-danger {
+  border-radius: 6px;
+}
+.btn-danger {
+  background: #ff5630;
+  border: none;
+}
+.btn-danger:hover {
+  background: #e14c2a;
+}
+.btn-outline-danger {
+  color: #ff5630;
+  border: 1px solid #ff5630;
+}
+.btn-outline-danger:hover {
+  background: #ffede0;
+  color: #ff5630;
+}
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+.list-group-item img {
+  border: 2px solid #fff;
+}
+.fw-bold {
+  font-weight: 600 !important;
+}
+.text-muted {
+  color: #888 !important;
+}

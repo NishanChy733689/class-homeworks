@@ -15,10 +15,10 @@ body {
     text-decoration:underline;
     text-decoration-color: #2575fc;
 }
-nav {
+nav{
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
+   
     top: 0;
     z-index: 1000;
 }
@@ -40,7 +40,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #2575fc;
+    color: #1c3e78;
     transition: color 0.3s ease;
 }
 
