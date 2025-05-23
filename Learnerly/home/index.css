@@ -44,24 +44,18 @@ body {
    ------------------------------------------------------------
    Styles for the main hero/banner area.
    ============================================================ */
-.hero {
-  height: 130vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
+.container-fluid{
+
+}
+   .hero {
+  margin-top:80px !important;
+  text-align: center;
+  height: 100%;
   color: var(--text-light);
-  padding: 0 20px;
+
   animation: fadeIn 2s ease-in-out;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  animation: slideUp 1.5s ease-in-out;
-}
 
 .hero p {
   font-size: 1.2rem;
@@ -82,9 +76,8 @@ body {
 }
 
 .hero-image {
+  max-width: 30vh;
   width: 100%;
-  height: auto;
-  max-width: 200px;
   border-radius: 10px;
   box-shadow: var(--feature-card-shadow);
 }

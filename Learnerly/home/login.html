@@ -14,7 +14,20 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
   </head>
   <body>
-    <div class="Log">
+    <nav class="navbar-dark">
+      <ul>
+        <li class="nav-item">Learnerly</li>
+        <li class="current nav-item navbar">
+          <a href="/Learnerly/home/index.html" class="nav-link">Home</a>
+        </li>
+        <li><a href="/Learnerly/home/agenda.html">About</a></li>
+        <li><a href="/Learnerly/home/more.html">More</a></li>
+        <li>
+          <button><a href="/Learnerly/home/login.html">Login</a></button>
+        </li>
+      </ul>
+    </nav>
+    <div class="Log" style="margin-top: 130px;">
       <h2>Login to Learnerly</h2>
       <form id="login-form">
         <input type="email" id="email" placeholder="Email" required /><br />

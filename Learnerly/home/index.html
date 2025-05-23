@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Learnerly</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="/Learnerly/public/nav.css" />
   </head>
   <body>
-    <nav>
+    <nav class="navbar-dark">
       <ul>
-        <li>Learnerly</li>
-        <li class="current"><a href="/Learnerly/home/index.html">Home</a></li>
+        <li class="nav-item">Learnerly</li>
+        <li class="current nav-item navbar">
+          <a href="/Learnerly/home/index.html" class="nav-link">Home</a>
+        </li>
         <li><a href="/Learnerly/home/agenda.html">About</a></li>
         <li><a href="/Learnerly/home/more.html">More</a></li>
         <li>
@@ -21,14 +29,21 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="hero">
-      <img
-        src="/Learnerly/pictures/education-easy-learning-set-icons-vector-20756304.jpg"
-        alt="Education Icon"
-        class="hero-image"
-      />
-      <h1>Pick The First Steps To Learning With Us</h1>
-      <p>
+    <div class="hero container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <img
+            src="/Learnerly/pictures/education-easy-learning-set-icons-vector-20756304.jpg"
+            alt="Education Icon"
+            class="hero-image"
+          />
+        </div>
+        <div class="col-8">
+        <h1 class="display-1">Pick The First Steps To Learning With Us</h1></div>
+      </div>
+      <div class="row">
+        <div class="col-12 fs-5">
+      
         Learning is the key to the greatest way to the successes humanity has
         got in its entire life. It needs a very great guidance and discipline.
         <mark>
@@ -36,7 +51,7 @@
           and guidance from everywhere </mark
         >. That's why we, the team of Learnerly, have taken a step forward
         towards that.
-      </p>
+      </div></div>
       <button>Get Started</button>
     </div>
 
@@ -98,6 +113,10 @@
         <li><a href="contact">Contact Us</a></li>
       </ul>
     </footer>
-    <audio src="/Learnerly/public/80_Am_Relax_Chrds_01_164_SP.wav" autoplay loop></audio>
+    <audio
+      src="/Learnerly/public/80_Am_Relax_Chrds_01_164_SP.wav"
+      autoplay
+      loop
+    ></audio>
   </body>
 </html>
