@@ -60,6 +60,9 @@ auth.onAuthStateChanged(function(user) {
     document.getElementById("profile-rank").textContent = userInfo.rank || "";
     console.log("Set profile-rank:", userInfo.rank);
 
+    document.getElementById("crdk").textContent = userInfo.credits || "0";
+    console.log("Set credits:", userInfo.credits);
+
     const progress = userInfo.progress || 0;
     const progressBar = document.querySelector(".progress-bar.bg-success");
     if (progressBar) {

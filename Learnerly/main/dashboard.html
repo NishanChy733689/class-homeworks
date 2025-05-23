@@ -16,61 +16,45 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Learnerly</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMain"
-          aria-controls="navbarMain"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMain">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Competitions</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" href="#">Quizzes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-          </ul>
-          <div class="d-flex align-items-center gap-3 flex-wrap">
-            <span class="badge bg-light text-dark mb-2 mb-lg-0"
-              >Math: 0 credits</span
-            >
-            <span class="badge bg-success mb-2 mb-lg-0"
-              >Coding: 11 credits</span
-            >
-            <span class="fw-bold mb-2 mb-lg-0">Dashboard</span>
-            <div class="dropdown">
-              <button
-                class="btn btn-light dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-              >
-                <div id="nav-name"></div>
-                <img
-                  src="https://randomuser.me/api/portraits/men/88.jpg"
-                  alt="User"
-                  class="rounded-circle"
-                  width="32"
-                  height="32"
-                  id="nav-pic"
-                />
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
-              </ul>
-            </div>
+    <nav class="custom-navbar">
+      <div class="nav-brand">Learnerly</div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+      <ul class="nav-links">
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Competitions</a></li>
+        <li><a href="#">Quizzes</a></li>
+        <li><a href="#">Support</a></li>
+        <li>
+          <span class="badge bg-light text-dark">Math: 0 credits</span>
+        </li>
+        <li>
+          <span class="badge bg-success">Coding: <div id="crd"></div> credits</span>
+        </li>
+        <li>
+          <span class="fw-bold">Dashboard</span>
+        </li>
+        <li class="nav-profile">
+          <div id="nav-name"></div>
+          <div class="dropdown">
+            <input type="checkbox" id="profile-toggle" class="profile-toggle" />
+            <label for="profile-toggle" class="profile-label">
+              <img
+                src="https://randomuser.me/api/portraits/men/88.jpg"
+                alt="User"
+                class="nav-pic"
+                id="nav-pic"
+                width="32"
+                height="32"
+              />
+            </label>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </nav>
     <div
       class="dashboard-main d-flex"

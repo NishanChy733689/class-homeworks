@@ -94,16 +94,16 @@
       <input type="text" id="grade" placeholder="Grade" required /><br />
       <input type="url" id="profilePic" placeholder="Profile Picture URL" /><br />
       <input type="text" id="bio" placeholder="Short Bio" /><br />
-      <select name="Courses" id="courses" multiple style="width: 200px; height: 100px;">
-        <option value="python">Python</option>
-        <option value="javascript">JavaScript</option>
-        <option value="java">Java</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="csharp">C#</option>
-        <option value="cpp">C++</option>
-        <option value="php">PHP</option>
-      </select>
+      <div id="courses" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+        <label><input type="checkbox" name="courses" value="python" /> Python</label>
+        <label><input type="checkbox" name="courses" value="javascript" /> JavaScript</label>
+        <label><input type="checkbox" name="courses" value="java" /> Java</label>
+        <label><input type="checkbox" name="courses" value="html" /> HTML</label>
+        <label><input type="checkbox" name="courses" value="css" /> CSS</label>
+        <label><input type="checkbox" name="courses" value="csharp" /> C#</label>
+        <label><input type="checkbox" name="courses" value="cpp" /> C++</label>
+        <label><input type="checkbox" name="courses" value="php" /> PHP</label>
+      </div>
       <button type="submit">Save & Go to Dashboard</button>
     </form>
     <div id="info-message"></div>
@@ -145,16 +145,12 @@
         profilePic: document.getElementById("profilePic").value,
         points:0,
         badges: [],
-        courses: {
-          python: document.getElementById("courses").value.includes("python"),
-          javascript: document.getElementById("courses").value.includes("javascript"),
-          java: document.getElementById("courses").value.includes("java"),
-          html: document.getElementById("courses").value.includes("html"),
-          css: document.getElementById("courses").value.includes("css"),
-          csharp: document.getElementById("courses").value.includes("csharp"),
-          cpp: document.getElementById("courses").value.includes("cpp"),
-          php: document.getElementById("courses").value.includes("php"),
-        },
+        courses: Array.from(document.querySelectorAll("#courses input[type='checkbox']")).reduce((acc, checkbox) => {
+          acc[checkbox.value] = checkbox.checked;
+          return acc;
+        }, {}),
+        credits:0,
+        bio: document.getElementById("bio").value,
       }).then(() => {
         window.location.href = "/Learnerly/main/dashboard.html";
       }).catch((err) => {
