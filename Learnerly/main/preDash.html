@@ -1,65 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learnerly - Welcome</title>
-    <link rel="stylesheet" href="../home/index.css" />
-    <link rel="stylesheet" href="../public/nav.css" />
-    <style>
-      .pre-dash-container {
-        min-height: 80vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background: var(--primary-bg, #f0f4f8);
-      }
-      .pre-dash-container h1 {
-        font-size: 2.5rem;
-        color: var(--primary-blue, #2575fc);
-        margin-bottom: 20px;
-      }
-      .pre-dash-container p {
-        font-size: 1.2rem;
-        color: var(--text-main, #333);
-        margin-bottom: 30px;
-        max-width: 500px;
-      }
-      .pre-dash-container button {
-        padding: 12px 32px;
-        font-size: 1.1rem;
-        background: var(--primary-blue, #2575fc);
-        color: #fff;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        transition: background 0.2s;
-      }
-      .pre-dash-container button:hover {
-        background: var(--primary-blue-dark, #1a5bb8);
-      }
-    </style>
+    <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learnerly - Complete Your Profile</title>
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <link rel="stylesheet" href="../home/index.css" />
+  <link rel="stylesheet" href="../public/nav.css" />
+  <style>
+    .pre-dash-container {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: var(--primary-bg, #f0f4f8);
+    }
+    .pre-dash-container h1 {
+      font-size: 2.5rem;
+      color: var(--primary-blue, #2575fc);
+      margin-bottom: 20px;
+    }
+    .pre-dash-container p {
+      font-size: 1.2rem;
+      color: var(--text-main, #333);
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+    .pre-dash-container button {
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      background: var(--primary-blue, #2575fc);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .pre-dash-container button:hover {
+      background: var(--primary-blue-dark, #1a5bb8);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input:focus {
+      border-color: var(--primary-blue, #2575fc);
+      outline: none;
+    }
+    button[type="submit"] {
+      background: var(--primary-green, #28a745);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+    button[type="submit"]:hover {
+      background: var(--primary-green-dark, #218838);
+    }
+  </style>
 </head>
 <body>
-    <nav>
-      <ul>
-        <li>Learnerly</li>
-        <li><a href="../home/index.html">Home</a></li>
-        <li><a href="../home/agenda.html">Courses</a></li>
-        <li><a href="../home/more.html">Teachers</a></li>
-        <li>
-          <button><a href="../home/login.html">Dashboard</a></button>
-        </li>
-      </ul>
-    </nav>
-    <div class="pre-dash-container">
-        <h1>Welcome to Your Learnerly Dashboard</h1>
-        <p>
-          You're almost there! Before you access your dashboard, please review your profile and make sure your information is up to date. This helps us personalize your learning experience.
-        </p>
-        <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
-    </div>
+  <nav>
+    <ul>
+      <li>Learnerly</li>
+      <li><a href="../home/index.html">Home</a></li>
+      <li><a href="../home/agenda.html">Courses</a></li>
+      <li><a href="../home/more.html">Teachers</a></li>
+      <li>
+        <button><a href="../home/login.html">Dashboard</a></button>
+      </li>
+    </ul>
+  </nav>
+  <div class="pre-dash-container">
+    <h1>Complete Your Profile</h1>
+    <form id="info-form">
+      <input type="text" id="name" placeholder="Full Name" required /><br />
+      <input type="text" id="grade" placeholder="Grade" required /><br />
+      <input type="url" id="profilePic" placeholder="Profile Picture URL" /><br />
+      <input type="text" id="bio" placeholder="Short Bio" /><br />
+      <select name="Courses" id="courses" multiple style="width: 200px; height: 100px;">
+        <option value="python">Python</option>
+        <option value="javascript">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="csharp">C#</option>
+        <option value="cpp">C++</option>
+        <option value="php">PHP</option>
+      </select>
+      <button type="submit">Save & Go to Dashboard</button>
+    </form>
+    <div id="info-message"></div>
+  </div>
+  <script>
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCcDkFYWbzTelFDvANfSRfMCnEdJz0Ueug",
+      authDomain: "learnerly-d8731.firebaseapp.com",
+      projectId: "learnerly-d8731",
+      storageBucket: "learnerly-d8731.firebasestorage.app",
+      messagingSenderId: "564343825391",
+      appId: "1:564343825391:web:f3b6293e8e59352613cc1a",
+      measurementId: "G-SJWGRR8CTF",
+      databaseURL: "https://learnerly-d8731-default-rtdb.asia-southeast1.firebasedatabase.app"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+    const db = firebase.database();
+
+    // Only allow access if logged in
+    auth.onAuthStateChanged(function(user) {
+      if (!user) {
+        window.location.href = "/Learnerly/home/login.html";
+      }
+    });
+
+    // Handle form submission
+    document.getElementById("info-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const user = auth.currentUser;
+      if (!user) {
+        document.getElementById("info-message").textContent = "Not logged in!";
+        return;
+      }
+      db.ref("users/" + user.uid).set({
+        name: document.getElementById("name").value,
+        grade: document.getElementById("grade").value,
+        profilePic: document.getElementById("profilePic").value,
+        points:0,
+        badges: [],
+        courses: {
+          python: document.getElementById("courses").value.includes("python"),
+          javascript: document.getElementById("courses").value.includes("javascript"),
+          java: document.getElementById("courses").value.includes("java"),
+          html: document.getElementById("courses").value.includes("html"),
+          css: document.getElementById("courses").value.includes("css"),
+          csharp: document.getElementById("courses").value.includes("csharp"),
+          cpp: document.getElementById("courses").value.includes("cpp"),
+          php: document.getElementById("courses").value.includes("php"),
+        },
+      }).then(() => {
+        window.location.href = "/Learnerly/main/dashboard.html";
+      }).catch((err) => {
+        document.getElementById("info-message").textContent = "Error: " + err.message;
+      });
+    });
+  </script>
 </body>
 </html>

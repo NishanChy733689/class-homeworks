@@ -5,6 +5,8 @@ nav * {
 body {
     margin: 0;
     padding: 0;
+    /* Add top padding to prevent content being hidden under navbar */
+    padding-top: 64px;
 }
 .current{
     background-color: rgba(92, 92, 92, 0.559);
@@ -18,8 +20,10 @@ body {
 nav{
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
 }
 

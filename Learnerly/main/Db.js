@@ -25,6 +25,8 @@ const firebaseConfig = {
   appId: "1:564343825391:web:f3b6293e8e59352613cc1a",
 
   measurementId: "G-SJWGRR8CTF",
+
+  databaseURL: "https://learnerly-d8731-default-rtdb.firebaseio.com",
 };
 
 // Initialize Firebase
@@ -63,3 +65,26 @@ export function updateData(path, data) {
 export function removeData(path) {
   return remove(ref(db, path));
 }
+
+const auth = firebase.auth();
+
+auth.onAuthStateChanged(function (user) {
+  if (!user) {
+    window.location.href = "/Learnerly/home/login.html";
+    return;
+  }
+  db.ref("users/" + user.uid).on("value", function (snapshot) {
+    const userInfo = snapshot.val();
+    if (!userInfo) {
+      window.location.href = "/Learnerly/main/preDash.html";
+      return;
+    }
+    document.getElementById("profile-pic").src = userInfo.profilePic || "";
+    document.getElementById("profile-name").textContent = userInfo.name || "";
+    document.getElementById("profile-grade").textContent = userInfo.grade
+      ? `Grade ${userInfo.grade}`
+      : "";
+    // Add other fields as needed
+  });
+});
+

@@ -17,54 +17,61 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">Learnerly</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarMain"
-        aria-controls="navbarMain"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarMain">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Competitions</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Quizzes</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
-        </ul>
-        <div class="d-flex align-items-center gap-3 flex-wrap">
-          <span class="badge bg-light text-dark mb-2 mb-lg-0">Math: 0 credits</span>
-          <span class="badge bg-success mb-2 mb-lg-0">Coding: 11 credits</span>
-          <span class="fw-bold mb-2 mb-lg-0">Dashboard</span>
-          <div class="dropdown">
-            <button
-              class="btn btn-light dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">Learnerly</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMain"
+          aria-controls="navbarMain"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Competitions</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Quizzes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Support</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <span class="badge bg-light text-dark mb-2 mb-lg-0"
+              >Math: 0 credits</span
             >
-              Nishan
-              <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="User"
-                class="rounded-circle"
-                width="32"
-                height="32"
-              />
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Profile</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
+            <span class="badge bg-success mb-2 mb-lg-0"
+              >Coding: 11 credits</span
+            >
+            <span class="fw-bold mb-2 mb-lg-0">Dashboard</span>
+            <div class="dropdown">
+              <button
+                class="btn btn-light dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <div id="nav-name"></div>
+                <img
+                  src="https://randomuser.me/api/portraits/men/88.jpg"
+                  alt="User"
+                  class="rounded-circle"
+                  width="32"
+                  height="32"
+                  id="nav-pic"
+                />
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     <div
       class="dashboard-main d-flex"
       style="background: #f7f8fa; min-height: 100vh"
@@ -76,58 +83,44 @@
       >
         <ul class="nav flex-column gap-2">
           <li class="nav-item">
-            <a
-              class="nav-link active dashboard-link"
-              href="#"
+            <a class="nav-link active dashboard-link" href="#"
               ><i class="fa fa-th-large me-2"></i>Dashboard</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-book me-2"></i>My lessons</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-lightbulb me-2"></i>My projects</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-question-circle me-2"></i>My quizzes</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-certificate me-2"></i>My certificates</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-trophy me-2"></i>Leaderboard</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link dashboard-link"
-              href="#"
+            <a class="nav-link dashboard-link" href="#"
               ><i class="fa fa-user-friends me-2"></i>Invite friends</a
             >
           </li>
-          <li class="nav-item d-flex align-items-center justify-content-between">
-            <span>
-              <i class="fa fa-medal me-2"></i>Competitions
-            </span>
+          <li
+            class="nav-item d-flex align-items-center justify-content-between"
+          >
+            <span> <i class="fa fa-medal me-2"></i>Competitions </span>
             <span class="badge bg-success">45</span>
           </li>
         </ul>
@@ -136,10 +129,7 @@
             Try a free Math lesson
             <span class="badge bg-success">New</span>
           </div>
-          <a
-            href="#"
-            class="small text-decoration-none"
-          >
+          <a href="#" class="small text-decoration-none">
             Start dashboard tour <i class="fa fa-arrow-right"></i>
           </a>
         </div>
@@ -162,7 +152,7 @@
                   height="80"
                 />
                 <div>
-                  <h4 class="mb-0" id="profile-name">Loading...</h4>
+                  <h4 class="mb-0" id="profile-name"></h4>
                   <div class="text-muted" id="profile-grade"></div>
                 </div>
                 <button class="btn btn-light btn-sm ms-2">
@@ -180,24 +170,24 @@
                     aria-valuemax="100"
                   ></div>
                 </div>
-                <div class="small text-success mt-2">
-                  Congratulations! You have reached maximum level.
-                </div>
               </div>
               <div class="d-flex flex-column align-items-end gap-2">
-                <div>
-                  <span class="fw-bold">Diamond level</span>
+                <div id="lvl">
+                  <span class="fw-bold" id="profile-level"></span>
                   <i class="fa fa-certificate text-info ms-1"></i>
                 </div>
                 <div>
-                  <span class="fw-bold text-success" style="font-size: 1.5rem"
-                    >46070</span
+                  <span
+                    class="fw-bold text-success"
+                    style="font-size: 1.5rem"
+                    id="profile-points"
+                    >0</span
                   >
                   <span class="text-muted ms-1">Points</span>
                 </div>
                 <div>
                   <span class="fw-bold text-secondary">Rank</span>
-                  <span class="fw-bold ms-1" style="font-size: 1.2rem">26</span>
+                  <span class="fw-bold ms-1" style="font-size: 1.2rem" id="profile-rank">26</span>
                 </div>
                 <a href="#" class="small text-danger">View points log</a>
               </div>
@@ -207,8 +197,10 @@
           <div class="col-lg-7">
             <div class="bg-white rounded shadow-sm p-4 mt-4">
               <h5 class="mb-4">Class leaderboard</h5>
-              <ul class="list-group">
-                <li class="list-group-item d-flex align-items-center justify-content-between">
+              <ul class="list-group" id="leaderboard-list">
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                >
                   <span>
                     <img
                       src="https://randomuser.me/api/portraits/men/31.jpg"
@@ -221,7 +213,9 @@
                   </span>
                   <span class="fw-bold">74060</span>
                 </li>
-                <li class="list-group-item d-flex align-items-center justify-content-between">
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                >
                   <span>
                     <img
                       src="https://randomuser.me/api/portraits/men/33.jpg"
@@ -234,7 +228,9 @@
                   </span>
                   <span class="fw-bold">65015</span>
                 </li>
-                <li class="list-group-item d-flex align-items-center justify-content-between">
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                >
                   <span>
                     <img
                       src="https://randomuser.me/api/portraits/women/34.jpg"
@@ -247,7 +243,9 @@
                   </span>
                   <span class="fw-bold">59625</span>
                 </li>
-                <li class="list-group-item d-flex align-items-center justify-content-between">
+                <li
+                  class="list-group-item d-flex align-items-center justify-content-between"
+                >
                   <span>
                     <img
                       src="https://randomuser.me/api/portraits/men/35.jpg"
@@ -266,17 +264,16 @@
           <div class="col-lg-5">
             <div class="bg-white rounded shadow-sm p-4 mt-4">
               <h5>Lessons</h5>
-              <div class="mb-2">Typography</div>
-              <div class="mb-2 text-muted">
-                6:30 PM BST, Fri, May 23, 2025
-              </div>
+              <div class="mb-2" id="lesson-title"></div>
+              <div class="mb-2 text-muted" id="lesson-time"></div>
               <button class="btn btn-danger btn-sm mb-2">Join class</button>
               <button class="btn btn-outline-danger btn-sm mb-2">
                 Reschedule class
               </button>
               <div class="mt-3">
-                <span class="fw-bold">23</span> <span class="text-muted">Upcoming</span>
-                <div class="small text-muted">
+                <span class="fw-bold" id="lesson-upcoming"></span>
+                <span class="text-muted">Upcoming</span>
+                <div class="small text-muted" id="lesson-points">
                   Attend classes on time to earn 460 points
                 </div>
               </div>
@@ -284,9 +281,9 @@
               <div>
                 <div class="fw-bold mb-1">Free doubt session</div>
                 <div class="small text-muted">
-                  If you have any question related to coding lessons, project, or
-                  anything else, you can join a doubt session with an expert Computer
-                  Science teacher.
+                  If you have any question related to coding lessons, project,
+                  or anything else, you can join a doubt session with an expert
+                  Computer Science teacher.
                   <br />
                   It comes free with your course.
                 </div>
@@ -297,5 +294,9 @@
       </main>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script src="dashboard.js"></script>
   </body>
 </html>
