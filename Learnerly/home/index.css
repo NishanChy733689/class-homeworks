@@ -44,25 +44,39 @@ body {
    ------------------------------------------------------------
    Styles for the main hero/banner area.
    ============================================================ */
-.container-fluid{
-
-}
    .hero {
-  margin-top:80px !important;
+  margin-top: 80px !important;
+  margin-bottom: 80px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
   text-align: center;
-  height: 100%;
   color: var(--text-light);
-
+  
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+  padding: 48px 16px 40px 16px;
   animation: fadeIn 2s ease-in-out;
 }
 
 
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 18px;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
 .hero p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  max-width: 800px;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 24px auto;
+  color: #eaf6fb;
   animation: slideUp 2s ease-in-out;
-  max-height: 200px;
 }
 
 .hero mark {
@@ -76,27 +90,49 @@ body {
 }
 
 .hero-image {
-  max-width: 30vh;
+  max-width: 260px;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   box-shadow: var(--feature-card-shadow);
+  margin-bottom: 28px;
 }
 
 .hero button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
+  margin-top: 24px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
   color: var(--text-light);
-  background-color: var(--primary-blue);
+  background-color: var(--primary-yellow);
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
   animation: fadeIn 2.5s ease-in-out;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
 }
 .hero button:hover {
-  background-color: var(--primary-blue-light);
-  transform: scale(1.1);
+  background-color: #ffcb6b;
+  color: var(--primary-blue);
+  transform: scale(1.07);
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .hero {
+    padding: 32px 8px 28px 8px;
+    min-height: 40vh;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-image {
+    max-width: 180px;
+    margin-bottom: 18px;
+  }
+  .hero p {
+    font-size: 1.05rem;
+  }
 }
 
 /* ============================================================
