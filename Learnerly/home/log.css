@@ -16,14 +16,19 @@ body {
 }
 
 .Log {
+  
+  line-height: 170%;
   background: var(--primary-blue-light);
   max-width: 350px;
-  margin: 60px auto 0 auto;
+  margin: 50% auto 0 auto;
   padding: 32px 24px 24px 24px;
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   text-align: center;
   margin-bottom: 50px;
+  width: 60%;
+  max-width: 50vh !important;
+  min-width: 40vh;
 }
 
 .Log h2 {
@@ -64,24 +69,6 @@ body {
   color: var(--primary-blue);
   font-weight: bold;
 }
-
-.google-btn {
-  width: 100%;
-  padding: 10px;
-  background: var(--google-red);
-  color: var(--text-light);
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 10px;
-  transition: all ease-in-out 0.2s;
-}
-
-.google-btn:hover {
-  background: #c5221f;
-}
-
 .signup-btn {
   width: 100%;
   padding: 10px;
@@ -112,4 +99,17 @@ body {
   margin-bottom: 10px;
   transition: all ease-in-out 0.2s;
   margin: 15px;
+}
+.google-btn {
+  background: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.google-btn:hover {
+  background: #f7f7f7;
 }
