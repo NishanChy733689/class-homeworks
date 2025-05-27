@@ -24,7 +24,7 @@ body {
 }
 .dashboard-sidebar .nav-link.active,
 .dashboard-sidebar .nav-link:hover {
-  background: #a9def9;
+  background: #36515e;
   color: #fff;
 }
 .dashboard-sidebar .badge {
@@ -295,6 +295,12 @@ body {
   font-size: 2rem;
   cursor: pointer;
   margin-left: auto;
+}
+.n1{
+  margin-top: 0px!important;
+  top: 0px!important;
+  position: fixed;
+  
 }
 @media (max-width: 900px) {
   .nav-links {
