@@ -1,0 +1,32 @@
+{
+  "tabWidth": 1,
+  "useTabs": true,
+  "semi": true,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "printWidth": 80,
+  "endOfLine": "crlf",
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "strict",
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": false,
+  "jsxBracketSameLine": true,
+  "embeddedLanguageFormatting": "auto",
+
+ 
+  "organizeAttributes": {
+    "groups": [
+      "class",
+      "id",
+      "style",
+      "data-*",
+      "aria-*",
+      "role",
+      "on*"
+    ],
+    "sortOrder": "asc"
+  }
+
+}

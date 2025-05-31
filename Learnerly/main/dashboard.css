@@ -4,22 +4,27 @@ body {
   background: #fcf6bd;
 }
 .dashboard-main {
+  margin-left: 260px; /* Match sidebar width */
+  margin-top: 1vh;
   min-height: 100vh;
   position: relative;
 }
 .dashboard-sidebar {
-  top: auto;
-  left: auto;
-  position: sticky;
+  top: 80px;
+  left: 0;
+  position: fixed;
   min-height: 100vh;
+  width: 260px; /* Use px for sidebar width */
   border-right: 1px solid #e4c1f9;
   background: #d0f4de;
+  z-index: 100; /* Ensure sidebar is above main content */
 }
 .dashboard-sidebar .nav-link {
-  color: #a9def9;
+  color: #3c515c;
   font-weight: 500;
   border-radius: 8px;
   padding: 10px 16px;
+  font-size: 2vh;
   transition: all 0.2s, color 0.2s;
 }
 .dashboard-sidebar .nav-link.active,
@@ -80,6 +85,7 @@ body {
 .progress {
   background: #e4c1f9;
   border-radius: 8px;
+  min-height: 2vh!important;
 }
 .progress-bar.bg-success {
   background: #a9def9 ;
@@ -120,6 +126,7 @@ body {
   color: #ff99c8;
 }
 .list-group-item {
+  font-size:x-large;
   border: none;
   border-bottom: 1px solid #e4c1f9;
   background: #d0f4de;
@@ -138,6 +145,10 @@ body {
 }
 
 /* Example CSS */
+
+nav a , nav li ,nav li * , nav ul{
+  font-size: 2vh!important;
+}
 .navbar {
     height: 40px;           /* Set a smaller height */
     padding: 0 20px;        /* Reduce vertical padding */
@@ -147,6 +158,7 @@ body {
   min-height: 40px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+  margin-bottom: 4vh !;
 }
 
 .navbar .container-fluid {
@@ -322,5 +334,31 @@ body {
   }
   .nav-toggle-label {
     display: block;
+  }
+}
+/* Responsive adjustments for the sidebar. If the user is on a mobile device the website will tell them to go to landscape mode */
+@media (max-width: 700px) and (orientation: portrait) {
+  body::before {
+    content: "Please rotate your device to landscape mode for the best experience.";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(252, 246, 189, 0.98);
+    color: #3c515c;
+    font-size: 2.2vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 2rem;
+  }
+  .dashboard-sidebar,
+  .dashboard-main,
+  .custom-navbar,
+  .navbar {
+    filter: blur(2px);
+    pointer-events: none;
+    user-select: none;
   }
 }

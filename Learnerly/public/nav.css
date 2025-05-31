@@ -11,11 +11,13 @@ body {
 .current{
     background-color: rgba(92, 92, 92, 0.559);
     height:100%;
+    text-align: center;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-decoration:underline;
     text-decoration-color: #2575fc;
+    font-size: 200.666667% !important;
 }
 nav{
     background-color: #ffffff;
@@ -27,11 +29,13 @@ nav{
     z-index: 1000;
     max-height: 64px;
 }
-
+ a ,li , li * ,ul{
+  font-size: 76.666667%; /* 80px/3 */
+}
 nav{
     max-height: 80px !important;           /* Set a smaller height */
     padding: 0 20px;        /* Reduce vertical padding */
-    line-height: 40px;      /* Vertically center text */
+    line-height: 160%; /* 80px/50 */
 }
 
 nav ul {
@@ -78,3 +82,4 @@ nav ul li button a {
     text-decoration: none;
     color: white;
 }
+

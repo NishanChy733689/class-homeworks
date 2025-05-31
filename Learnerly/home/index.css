@@ -266,3 +266,81 @@ footer ul li a {
 footer ul li a:hover {
   color: var(--footer-link-hover);
 }
+.navbar {
+    height: 40px;           /* Set a smaller height */
+    padding: 0 20px;        /* Reduce vertical padding */
+    line-height: 40px;      /* Vertically center text */
+}
+.navbar {
+  min-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 4vh !;
+}
+
+.navbar .container-fluid {
+  min-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link, .navbar .btn, .navbar .badge, .navbar .fw-bold {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: 40px !important;
+  height: 40px !important;
+  font-size: 1rem;
+}
+
+/* Fix navbar profile image alignment and size */
+.navbar .dropdown-toggle #nav-pic {
+  height: 32px !important;
+  width: 32px !important;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-bottom: -4px;
+  /* Adjust margin as needed for perfect centering */
+}
+
+.navbar .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  height: 40px !important;
+  padding: 0 8px !important;
+}
+
+/* Custom Navbar Styles */
+.custom-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 1rem;
+  height: 48px;
+  box-shadow: 0 2px 8px #e4c1f9;
+  position: relative;
+  z-index: 10;
+}
+.nav-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  margin-left: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+.nav-links a, .nav-links span, .fw-bold {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1rem;
+}

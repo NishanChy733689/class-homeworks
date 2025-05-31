@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>User Control Panel</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		/>
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+			body {
+				font-family: Arial, sans-serif;
+				background: #f7f8fa;
+				margin: 0;
+				padding: 0;
+			}
+			.container {
+				max-width: 1000px;
+				margin: 40px auto;
+				background: #fff;
+				border-radius: 10px;
+				box-shadow: 0 2px 8px #e4c1f9;
+				padding: 32px;
+			}
+			h1 {
+				margin-bottom: 24px;
+			}
+			.search-bar {
+				display: flex;
+				gap: 10px;
+				margin-bottom: 8px;
+			}
+			.search-bar input {
+				flex: 1;
+				padding: 8px 12px;
+				border-radius: 5px;
+				border: 1px solid #ccc;
+			}
+			.search-bar button {
+				padding: 8px 18px;
+				border-radius: 5px;
+				border: none;
+				background: #2f515a;
+				color: #fff;
+				cursor: pointer;
+			}
+			.suggestions {
+				background: #fff;
+				border: 1px solid #ccc;
+				border-radius: 0 0 8px 8px;
+				max-height: 180px;
+				overflow-y: auto;
+				margin-bottom: 16px;
+			}
+			.suggestion-item {
+				display: flex;
+				align-items: center;
+				padding: 8px 12px;
+				cursor: pointer;
+				border-bottom: 1px solid #f0f0f0;
+			}
+			.suggestion-item:last-child {
+				border-bottom: none;
+			}
+			.suggestion-item:hover {
+				background: #f7f8fa;
+			}
+			.suggestion-pic {
+				width: 32px;
+				height: 32px;
+				border-radius: 50%;
+				object-fit: cover;
+				margin-right: 12px;
+				border: 1px solid #eee;
+			}
+			.user-info {
+				margin-bottom: 24px;
+				display: flex;
+				align-items: flex-start;
+				gap: 24px;
+			}
+			.user-pic {
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				object-fit: cover;
+				border: 2px solid #e4c1f9;
+			}
+			.user-fields {
+				flex: 1;
+			}
+			.user-info span {
+				display: inline-block;
+				min-width: 120px;
+				font-weight: bold;
+			}
+			.controls label {
+				display: block;
+				margin-top: 12px;
+			}
+			.controls input,
+			.controls select {
+				margin-left: 10px;
+				padding: 4px 8px;
+				border-radius: 4px;
+				border: 1px solid #ccc;
+			}
+			.controls button {
+				margin-top: 18px;
+				padding: 8px 18px;
+				border-radius: 5px;
+				border: none;
+				background: #28a745;
+				color: #fff;
+				cursor: pointer;
+			}
+			.controls button:disabled {
+				background: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>User Control Panel</h1>
+			<div class="search-bar">
+				<input
+					type="text"
+					id="search-input"
+					placeholder="Search by name or UID..."
+					autocomplete="off"
+				/>
+				<button id="search-btn"
+					><i class="fa fa-search"></i>
+					Search</button
+				>
+			</div>
+			<div
+				id="suggestions"
+				class="suggestions"
+				style="display: none"
+			></div>
+			<div
+				id="user-details"
+				style="display: none"
+			>
+				<div class="user-info">
+					<img
+						id="user-pic"
+						class="user-pic"
+						src=""
+						alt="Profile"
+					/>
+					<div class="user-fields">
+						<div
+							><span>Name:</span>
+							<span id="user-name"></span
+						></div>
+						<div
+							><span>UID:</span>
+							<span id="user-uid"></span
+						></div>
+						<div
+							><span>Grade:</span>
+							<span id="user-grade"></span
+						></div>
+						<div
+							><span>Points:</span>
+							<span id="user-points"></span
+						></div>
+						<div
+							><span>Credits:</span>
+							<span id="user-credits"></span
+						></div>
+						<div
+							><span>Courses:</span>
+							<span id="user-courses"></span
+						></div>
+					</div>
+				</div>
+				<div class="controls">
+					<label
+						>Grade:
+						<input
+							type="number"
+							id="edit-grade"
+							min="1"
+							max="12"
+						/>
+					</label>
+					<label
+						>Points:
+						<input
+							type="number"
+							id="edit-points"
+							min="0"
+						/>
+					</label>
+					<label
+						>Credits:
+						<input
+							type="number"
+							id="edit-credits"
+							min="0"
+						/>
+					</label>
+					<label
+						>Courses:
+						<select
+							id="edit-courses"
+							multiple
+							style="min-width: 150px"
+						>
+							<option value="cpp">C++</option>
+							<option value="csharp">C#</option>
+							<option value="css">CSS</option>
+							<option value="html">HTML</option>
+							<option value="java">Java</option>
+							<option value="javascript"
+								>JavaScript</option
+							>
+							<option value="php">PHP</option>
+							<option value="python"
+								>Python</option
+							>
+						</select>
+					</label>
+					<button id="save-btn"
+						>Save Changes</button
+					>
+				</div>
+			</div>
+			<div
+				id="no-user"
+				style="
+					color: #c00;
+					margin-top: 20px;
+					display: none;
+				"
+				>User not found.</div
+			>
+			<!-- Leaderboard Refresh Section -->
+			<div
+				id="leaderboard-refresh"
+				style="margin-top: 32px"
+			>
+				<h2
+					style="
+						margin-bottom: 16px;
+						font-size: 1.2rem;
+					"
+					>Leaderboard (Top 10)</h2
+				>
+				<button
+					id="refresh-leaderboard-btn"
+					style="
+						padding: 8px 18px;
+						border-radius: 5px;
+						border: none;
+						background: #2f515a;
+						color: #fff;
+						cursor: pointer;
+					"
+				>
+					Refresh Leaderboard from Users
+				</button>
+				<div
+					id="leaderboard-list"
+					style="margin-top: 18px"
+				></div>
+				<div
+					id="lb-refresh-msg"
+					style="
+						margin-top: 10px;
+						color: green;
+						display: none;
+					"
+				></div>
+			</div>
+		</div>
+
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+		<script src="user.js"></script>
+	</body>
+</html>
