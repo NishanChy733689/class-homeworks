@@ -17,7 +17,7 @@ body {
     padding: 10px;
     text-decoration:underline;
     text-decoration-color: #2575fc;
-    font-size: 200.666667% !important;
+    margin: 0px 0px !important;
 }
 nav{
     background-color: #ffffff;
@@ -33,9 +33,9 @@ nav{
   font-size: 76.666667%; /* 80px/3 */
 }
 nav{
-    max-height: 80px !important;           /* Set a smaller height */
+    height:fit-content !important;           /* Set a smaller height */
     padding: 0 20px;        /* Reduce vertical padding */
-    line-height: 160%; /* 80px/50 */
+    line-height: 100%; /* 80px/50 */
 }
 
 nav ul {
@@ -43,12 +43,14 @@ nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 0px 20px;
     margin: 0;
+    position: static;
 }
 
 nav ul li {
-    margin: 0 10px;
+    position: relative;
+    margin: 1vh 10px;
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -59,23 +61,20 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #1a5bb8;
-    text-decoration: underline;
-}
 
 nav ul li button {
-    padding: 8px 15px;
-    background-color: #2575fc;
+    padding: 10px 20px;
+    background-color: #44d68b;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition:0.3s ease;
 }
 
 nav ul li button:hover {
     background-color: #1a5bb8;
+    scale: 1.06;
 }
 
 nav ul li button a {
