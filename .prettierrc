@@ -15,9 +15,7 @@
   "jsxBracketSameLine": false,
   "embeddedLanguageFormatting": "auto",
   "bracketSameLine":true,
-  "plugins": [
-    "prettier-plugin-organize-attributes"
-  ],
+
   "pluginSearchDirs": false,
   
  
