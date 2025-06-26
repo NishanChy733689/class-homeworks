@@ -19,15 +19,17 @@
       }
     </style>
   </head>
-  <body>
+  <body class="">
     <center>
-      <h1 id="result" class="display-1">0 | 1</h1>
-      <button onclick="update()" class="btn">NEXT</button>
-      <button id="dark" class="btn" onclick="darken()">MODE</button>
+      <h1 class="display-3">Welcome to the Fibbonacci number displayer in our website</h1>
+      <h1 id="result" class="display-1 ">0 | 1</h1>
+      <button onclick="update()" class="btn bg-light text-black">NEXT</button>
+      <button id="dark" class="btn bg-light text-black" onclick="darken()">MODE</button>
     </center>
     <script>
       let prev = 0;
       let curr = 1;
+      var body =document.body;
       let temp = function (prev, curr) {
         return prev + curr;
       };
@@ -38,8 +40,12 @@
         curr =a;
         console.log(prev);
         console.log(curr);
-
         document.getElementById('result').innerHTML += '  | ' + a;
+      }
+      function darken(){
+        body.classList.add("bg-dark");
+        body.classList.add("text-light"); 
+       
       }
     </script>
   </body>
