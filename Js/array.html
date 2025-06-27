@@ -21,6 +21,7 @@
     <input type="number" id="findEl" />
     <button onclick="find()">Find</button>
     <button onclick="bold()">Bold Up</button>
+    <button onclick="unbold()">Unbold</button>
     <script>
       var elements = [];
       let display = document.getElementById('elements');
@@ -50,8 +51,7 @@
       }
       function bold(){
         try {
-          elements[parseInt(findInp.value)]="<b>"+elements[parseInt(findInp.value)];
-          elements.join("</b>");
+          elements[parseInt(findInp.value)]="<b>"+elements[parseInt(findInp.value)]+"</b>";
           update();
         } catch (error) {
           console.log(error);
@@ -60,6 +60,12 @@
       function pop(){
         elements.pop();
         update()
+      }
+      function unbold(){
+        str=elements[parseInt(findInp.value)];
+        str=str.slice(3,str.length-4);
+        elements[parseInt(findInp.value)]=str;
+        update();
       }
     </script>
   </body>
