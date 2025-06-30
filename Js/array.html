@@ -14,10 +14,10 @@
       }
     </style>
   </head>
-  <body class="bg-light">
-    <div class="container py-5">
+  <body class="bg-dark">
+    <div class="container py-5 bg-light br">
       <div class="text-center mb-4">
-        <p class="text-muted">Below you will see the elements you added to the array</p>
+        <p class="text-muted">Below you will see the tasks you added to the array</p>
         <ul id="elements" class="list-unstyled fs-5"></ul>
 
         <div class="input-group mb-3">
@@ -28,7 +28,7 @@
       </div>
 
       <div class="text-center mt-5">
-        <p class="text-muted">Below you will see the element you searched in the array</p>
+        <p class="text-muted">Below you will see the tasks you searched in the array</p>
         <h4 id="srch" class="mb-3 text-success"></h4>
         <div class="input-group mb-3">
           <input
@@ -60,6 +60,7 @@
           if (bolded.has(i)) li.classList.add('bolded');
           display.appendChild(li);
         });
+        findInp.setAttribute("min",elements.length);
       }
 
       function add() {
