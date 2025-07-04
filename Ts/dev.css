@@ -1,18 +1,135 @@
-* {
-        color: #504e4e;
-        margin:1vh;
-      }
-      form > input {
-        width: 14rem !important;
-        border-radius: 5px !important;
-        border:none !important;
-        box-shadow: 2px 2px 4px #504e4e;
-      }
-      form {
-        background-color: #f3f3f3;
-        width: fit-content;
-        padding: 2rem;
-        margin-top: 25%;
-        border-radius: 2rem !important;
-        box-shadow: 2px 2px 6px rgb(158, 158, 158);
-      }
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a9def9 0%, #e4c1f9 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.form-glass {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  width: 350px;
+  margin: 2rem auto;
+  transition: box-shadow 0.3s;
+}
+
+.form-glass:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+.form-glass label {
+  font-weight: 600;
+  color: #3c515c;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.form-glass input[type='text'],
+.form-glass input[type='number'],
+.form-glass input[type='email'],
+.form-glass input[type='password'] {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.1rem;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 8px rgba(60, 81, 92, 0.07);
+  font-size: 1rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+
+.form-glass input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 2px #a9def9;
+}
+
+#res {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  min-height: 1.2em;
+  transition: color 0.2s;
+}
+
+@media (max-width: 500px) {
+  .form-glass {
+    width: 95vw;
+    padding: 1.5rem 0.5rem;
+  }
+}
+.button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  color: #eee;
+  border-radius: 7px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+}
+.button:active {
+  transform: translateY(5px);
+}
+/* From Uiverse.io by andrew-demchenk0 */
+.info {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 100%;
+  padding: 12px;
+  margin-top: 2vh;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: #1aed59;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+}
+
+.info__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.info__icon path {
+  fill: #fff;
+}
+
+.info__title {
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}
+
+.info__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.info__close path {
+  fill: #fff;
+}
