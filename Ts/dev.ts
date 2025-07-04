@@ -44,7 +44,7 @@ function validate(e) {
   }
 
   // Password strength checker (only if no errors)
-  let strengthMsg = '';
+  
   let strength = 0;
   if (password.length >= 8) strength++;
   if (/[A-Z]/.test(password)) strength++;

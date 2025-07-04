@@ -42,7 +42,6 @@ function validate(e) {
         err = true;
     }
     // Password strength checker (only if no errors)
-    var strengthMsg = '';
     var strength = 0;
     if (password.length >= 8)
         strength++;
